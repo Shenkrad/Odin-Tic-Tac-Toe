@@ -8,6 +8,8 @@
     --secondary-color: #412B6B;
     --terciary-color: #5C3E94;
     --details-color: #F25912;
+    --red-color: #f90707;
+    --green-color: #0acf0a;
 }
 
 body {
@@ -15,6 +17,22 @@ body {
     color: var(--details-color);
     box-sizing: border-box;
     font-family: 'roboto', sans-serif;
+}
+
+.red {
+    color: var(--red-color);
+}
+
+.green {
+    color: var(--green-color);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:disabled:hover{
+    cursor: default;
 }
 
 .container {
@@ -30,32 +48,31 @@ body {
 
 .gameButtons {
     display: grid;
-    grid-template-columns: repeat(2, 150px);
+    grid-template-columns: repeat(2, 170px);
     justify-content: center;
     gap: 50px;
 }
 
 .gameButtons > button {
-    width: 150px;
+    width: 170px;
     background-color: var(--terciary-color);
     color: var(--details-color);
     font-weight: 600;
     padding: 15px 50px;
     text-align: center;
     border-radius: 10px;
-    border: 0;
-    box-shadow: 2px 2px 10px var(--terciary-color);
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 0 5px var(--terciary-color);
     font-size: 1.2em;
 }
 
 #btn-play {
-    color: rgb(10, 207, 10);
+    color: var(--green-color);
 }
 
 #btn-reset {
-    color: rgb(249, 7, 7);
+    color: var(--red-color);
 }
-
 
 #playersContainer {
     display: grid;
@@ -71,7 +88,13 @@ body {
     height: 30px;
     font-size: 1.2em;
     color: var(--details-color);
-    padding: 5px;;
+    padding: 5px;
+    border: 2px solid var(--secondary-color);
+}
+
+.playerNameInput:focus {
+    border-color: var(--details-color);
+    outline: 0;
 }
 
 .gameGrid {
@@ -87,4 +110,6 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 10px;
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 0 5px var(--terciary-color);
 }

@@ -12,11 +12,11 @@
         <h1>Tic Tac Toe</h1>
         <div id="playersContainer">
             <div class="playerBox">
-                <label class="playerText" for="x">Player 0: </label>
+                <label class="playerText" for="x">Player <span class="green">X</span> : </label>
                 <input type="text" id="x" class="playerNameInput">
             </div>
             <div class="playerBox">
-                <label for="o" class="playerText">Player X: </label>
+                <label for="o" class="playerText">Player <span class="red">O</span> :</label>
                 <input type="text" id="o" class="playerNameInput">
             </div>
         </div>
@@ -25,15 +25,15 @@
             <button id="btn-reset" class="gameButton">Reset</button>
         </div>
         <div class="gameGrid">
-            <div class="gameCell"></div>
-            <div class="gameCell"></div>
-            <div class="gameCell"></div>
-            <div class="gameCell"></div>
-            <div class="gameCell"></div>
-            <div class="gameCell"></div>
-            <div class="gameCell"></div>
-            <div class="gameCell"></div>
-            <div class="gameCell"></div>
+            <button class="gameCell" id="6" disabled></button>
+            <button class="gameCell" id="7" disabled></button>
+            <button class="gameCell" id="8" disabled></button>
+            <button class="gameCell" id="3" disabled></button>
+            <button class="gameCell" id="4" disabled></button>
+            <button class="gameCell" id="5" disabled></button>
+            <button class="gameCell" id="0" disabled></button>
+            <button class="gameCell" id="1" disabled></button>
+            <button class="gameCell" id="2" disabled></button>
         </div>
     </div>
 </body>

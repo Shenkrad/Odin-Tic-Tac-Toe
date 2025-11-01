@@ -24,7 +24,7 @@ export const gameController = (function(){
                 alert(activePlayer.getName() + " wins!"); 
             }
         }
-        
+
         changeActivePlayer();
     }
 
@@ -46,6 +46,8 @@ export const gameController = (function(){
         players.forEach(player => player.clear());
     }
 
-   return {setPlayer, getPlayers, makeMove, getGameResults, resetGame};
+    const getActivePlayer = () => activePlayer;
+
+   return {setPlayer, getPlayers, makeMove, getGameResults, resetGame, getActivePlayer};
 
 })();

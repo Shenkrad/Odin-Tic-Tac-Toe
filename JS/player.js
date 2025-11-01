@@ -5,8 +5,9 @@ export function createPlayer (inName, inSymbol) {
 
     const makeMove = position => moves.push(position);
     const getName = () => name;
+    const getSymbol = () => symbol;
     const getMoves = () => moves;
     const clear = () => moves = [];
 
-    return { makeMove, getName, getMoves, clear };
+    return { makeMove, getName, getMoves, clear, getSymbol };
 };
