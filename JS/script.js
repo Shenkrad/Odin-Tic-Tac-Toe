@@ -5,6 +5,7 @@ import { gameController } from "./gameController.js";
     const startButton = document.querySelector(".btn-play");
     const resetButton = document.querySelector(".btn-reset");
     const playerInputs = Array.from(document.querySelectorAll(".playerNameInput"));
+    const resultText = document.querySelector('#resultText');
 
     // event binding
     startButton.addEventListener('click', handleStart);
@@ -41,6 +42,8 @@ import { gameController } from "./gameController.js";
             cell.classList.remove('playerOCell');
             cell.classList.add('activeGameCell');
         });
+
+        resultText.textContent = '';
     }
 
     function handleMove(e) {
@@ -55,13 +58,16 @@ import { gameController } from "./gameController.js";
             cell.classList.add('playerOCell');
         }
 
-        const finishedGame = gameController.makeMove(parseInt(cell.id));
+        const gameResults = gameController.makeMove(parseInt(cell.id));
 
-        if (finishedGame) {
+        if (gameResults) {
             cells.forEach(cell => {
                 cell.disabled = true;
                 cell.classList.remove('activeGameCell');
             });
+
+            // show game results
+            resultText.textContent = gameResults;
         }
     }
 

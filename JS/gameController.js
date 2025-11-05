@@ -18,17 +18,15 @@ export const gameController = (function(){
         gameboard.addMove(position);
         const results = getGameResults();
         if (results) {
-            if (results == 'draw') {
-                alert(results);
-                return true;
+            if (results == 'Draw!') {
+                return results;
             } else {
-                alert(activePlayer.getName() + " wins!");
-                return true;
+                return activePlayer.getName() + ' wins!';
             }
         }
 
         changeActivePlayer();
-        return false;
+        return results;
     }
 
     const changeActivePlayer = () => {
@@ -40,7 +38,7 @@ export const gameController = (function(){
             return activePlayer;
         }
         if (!gameboard.getBoard().includes(-1) && !gameboard.checkWinCondition(activePlayer.getMoves().sort())) {
-            return 'draw';
+            return 'Draw!';
         }
     }
 
