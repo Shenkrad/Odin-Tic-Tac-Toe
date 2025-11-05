@@ -2,8 +2,8 @@ import { gameController } from "./gameController.js";
 
 (function render() {
     const cells = Array.from(document.querySelectorAll(".gameCell"));
-    const startButton = document.querySelector("#btn-play");
-    const resetButton = document.querySelector("#btn-reset");
+    const startButton = document.querySelector(".btn-play");
+    const resetButton = document.querySelector(".btn-reset");
     const playerInputs = Array.from(document.querySelectorAll(".playerNameInput"));
 
     // event binding
@@ -20,10 +20,10 @@ import { gameController } from "./gameController.js";
                 input.value = 'Player ' + input.id.toUpperCase();
             }
             input.readOnly = true;
-
-            startButton.disabled = true;
-            startButton.style.color = 'grey';
         });
+
+        startButton.disabled = true;
+        resetButton.disabled = false;
         
         cells.forEach(cell => {
             cell.disabled = false;

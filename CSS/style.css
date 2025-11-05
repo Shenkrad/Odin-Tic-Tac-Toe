@@ -56,7 +56,6 @@ button:disabled:hover{
 .gameButtons > button {
     width: 170px;
     background-color: var(--terciary-color);
-    color: var(--details-color);
     font-weight: 600;
     padding: 15px 50px;
     text-align: center;
@@ -66,12 +65,16 @@ button:disabled:hover{
     font-size: 1.2em;
 }
 
-#btn-play {
+.gameButtons > button:disabled {
+    color: grey;
+}
+
+.btn-play {
     color: var(--green-color);
 }
 
-#btn-reset {
-    color: var(--red-color);
+.btn-reset {
+    color: var(--red-color); 
 }
 
 #playersContainer {
