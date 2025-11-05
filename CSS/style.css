@@ -97,6 +97,10 @@ button:disabled:hover{
     outline: 0;
 }
 
+.playerNameInput:read-only:focus {
+    border-color: var(--secondary-color);
+}
+
 .gameGrid {
     display: grid;
     grid-template-columns: repeat(3, 100px);
@@ -112,4 +116,22 @@ button:disabled:hover{
     border-radius: 10px;
     border: 2px solid var(--secondary-color);
     box-shadow: 0 0 5px var(--terciary-color);
+    font-size: 4em;
+}
+
+.activeGameCell {
+    /* border-color: var(--details-color); */
+    box-shadow: 0 0 5px var(--details-color);
+}
+
+.activeGameCell:hover {
+    box-shadow: 0 0 10px var(--details-color);
+}
+
+.playerXCell {
+    color: #16d516;
+}
+
+.playerOCell {
+    color: #fc0707;
 }

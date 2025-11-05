@@ -20,12 +20,15 @@ export const gameController = (function(){
         if (results) {
             if (results == 'draw') {
                 alert(results);
+                return true;
             } else {
-                alert(activePlayer.getName() + " wins!"); 
+                alert(activePlayer.getName() + " wins!");
+                return true;
             }
         }
 
         changeActivePlayer();
+        return false;
     }
 
     const changeActivePlayer = () => {
@@ -44,6 +47,7 @@ export const gameController = (function(){
     const resetGame = () => {
         gameboard.clearBoard();
         players.forEach(player => player.clear());
+        activePlayer = players[0];
     }
 
     const getActivePlayer = () => activePlayer;

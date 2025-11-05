@@ -14,7 +14,7 @@ export const gameboard = (function(){
 
     const addMove = move => board[move] = move;
 
-    const clearBoard = () => board.fill(0);
+    const clearBoard = () => board.fill(-1);
 
     const checkWinCondition = playerMoves => winCondition.some(condition => {
         return condition.every((position) => playerMoves.includes(position));
